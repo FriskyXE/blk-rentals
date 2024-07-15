@@ -21,10 +21,11 @@ server_scripts {
     'server/main.lua'
 }
 
-ui_page "web/index.html"
+ui_page "html/index.html"
 files {
-	'web/index.html',
-	'web/app.js'
+	'html/index.html',
+	'html/styles.css',
+	'html/app.js'
 }
 
 lua54 'yes'
