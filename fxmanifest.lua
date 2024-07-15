@@ -14,10 +14,9 @@ client_scripts {
     '@PolyZone/BoxZone.lua',
     '@PolyZone/CircleZone.lua',
     '@PolyZone/ComboZone.lua',
-	'client/main.lua'
+    'client/main.lua'
 }
 server_scripts {
-    '@oxmysql/lib/MySQL.lua',
     'server/main.lua'
 }
 
