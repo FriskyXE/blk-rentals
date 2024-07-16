@@ -1,8 +1,8 @@
 body {
     display: none;
-    background: rgba(12, 14, 18, 0.95);
+    background-color: rgba(12, 14, 18, 0.95);
     color: white;
-	font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif;
 }
 
 .container {
