@@ -17,9 +17,9 @@
                     <img :src="boat.image" class="card-img-top" :alt="boat.label">
                     <div class="card-body">
                         <h5 class="card-title">{{ boat.label }}</h5>
-						<p style='color:red; font-weight:bold'>คำเตือน: ไม่แนะนำให้เก็บของในเรือ<br>อาจจะทำให้ของหายได้</p>   
-                        <p class="card-text">Rent for ${{ boat.price }}</p>
-                        <button class="btn btn-primary rent-button" @click="rentBoat(boat.model)">Rent</button>
+						<p style='color:red; font-weight:bold'>คำเตือน: ไม่แนะนำให้เก็บของในเรือ<br>อาจจะทำให้ของหายได้</p>
+                        <p class="card-text">เช่าเรือนี้ในราคา ${{ boat.price }}</p>
+                        <button class="btn btn-primary rent-button" @click="rentBoat(boat.model)">เช่าทันที</button>
                     </div>
                 </div>
             </div>
