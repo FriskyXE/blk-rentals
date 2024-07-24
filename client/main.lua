@@ -114,22 +114,24 @@ end)
 
 -- Return Zone
 CreateThread(function()
-    local returnZone = CircleZone:Create(Config.ReturnZone.coords, Config.ReturnZone.radius, {
-        name = "boat_return_zone",
-        debugPoly = false
-    })
+    for _, returnZoneConfig in ipairs(Config.ReturnZones) do
+        local returnZone = CircleZone:Create(returnZoneConfig.coords, returnZoneConfig.radius, {
+            name = "boat_return_zone",
+            debugPoly = false
+        })
 
-    returnZone:onPlayerInOut(function(isPointInside)
-        inReturnZone = isPointInside
-        if inReturnZone then
-            local playerPed = PlayerPedId()
-            if IsPedInAnyBoat(playerPed) then
-                lib.showTextUI('[E] to return the boat', { position = 'left-center' })
+        returnZone:onPlayerInOut(function(isPointInside)
+            inReturnZone = isPointInside
+            if inReturnZone then
+                local playerPed = PlayerPedId()
+                if IsPedInAnyBoat(playerPed) then
+                    lib.showTextUI('[E] to return the boat', { position = 'left-center' })
+                end
+            else    
+                lib.hideTextUI()
             end
-        else    
-            lib.hideTextUI()
-        end
-    end)
+        end)
+    end
 end)
 
 -- Return Boat Handler
