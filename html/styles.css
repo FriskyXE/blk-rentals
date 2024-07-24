@@ -1,12 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Anuphan:wght@100..700&display=swap');
+
 * {
 	user-select: none;
+	font-family: "Anuphan", sans-serif;
 }
 
 body {
     display: none;
     background-color: rgba(12, 14, 18, 0.95);
     color: white;
-    font-family: Arial, sans-serif;
 }
 
 .container {
