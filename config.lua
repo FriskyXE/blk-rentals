@@ -27,3 +27,22 @@ Config.ReturnZone = {
     coords = vector3(-1797.95, -1230.96, 0.19),
     radius = 5.0
 }
+
+Config.Notify = function(source, message, type, position)
+	-- server-side
+	if IsDuplicityVersion() then
+		TriggerClientEvent('ox_lib:notify', source, {
+			title = 'Boat',
+		    description = message or 'System',
+		    type = type or 'inform',
+			position = position or 'center-right'
+		})
+	else -- client-side
+		lib.notify({
+			title = 'Boat',
+		    description = message or 'System',
+		    type = type or 'inform',
+			position = position or 'center-right'
+		})
+	end
+end)
