@@ -164,18 +164,10 @@ CreateThread(function()
                     TriggerServerEvent('blk-rentals:server:returnBoat', {model = boatModel, price = boatPrice})
                     lib.hideTextUI()
                 else
-                    lib.notify({
-                        description = 'Boat price not found!',
-                        type = 'error',
-                        position = 'center-right'
-                    })
+					Config.Notify('Boat price not found!', 'error', 'center-right')	
                 end
             else
-                lib.notify({
-                    description = 'You are not in a boat!',
-                    type = 'error',
-                    position = 'center-right'
-                })
+				Config.Notify('You are not in a boat!', 'error', 'center-right')
             end
         end
     end
