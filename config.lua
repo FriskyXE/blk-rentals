@@ -1,6 +1,6 @@
 Config = {}
 
-Config.OXloadModel = true
+Config.OXloadModel = true -- if set true will use ox loadmodel (ox_lib) / if set false will use default loadmodel
 
 -- label = name boat to show in UI
 -- model = model boat for rental [https://gtahash.ru/car/?c=boats]
