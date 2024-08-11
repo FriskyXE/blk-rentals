@@ -5,10 +5,14 @@ local spawnedNPCs = {}
 
 -- Utility functions
 local function loadModel(model)
-    RequestModel(model)
-    while not HasModelLoaded(model) do
-        Wait(1)
-    end
+	if Config.OXloadModel then
+		lib.requestModel(model)
+	else
+	    RequestModel(model)
+	    while not HasModelLoaded(model) do
+	        Wait(1)
+	    end
+	end
 end
 
 local function createNPC(npc)
