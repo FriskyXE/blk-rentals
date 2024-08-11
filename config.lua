@@ -1,5 +1,7 @@
 Config = {}
 
+Config.OXloadModel = true
+
 -- label = name boat to show in UI
 -- model = model boat for rental [https://gtahash.ru/car/?c=boats]
 -- price = price for rental
